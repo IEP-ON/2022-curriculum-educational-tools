@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>도구 생성 의도 및 프롬프트 요약 - 2022 개정교육과정 수업도구</title>
+    <style>
+        body {
+            font-family: 'Malgun Gothic', '맑은 고딕', sans-serif;
+            font-size: 14px;
+            line-height: 1.7;
+            margin: 0;
+            padding: 0;
+            background: #f4f6f8;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            background: #2c3e50;
+            color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 0 0 10px 10px;
+        }
+        .title {
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .subtitle {
+            font-size: 13px;
+            opacity: 0.9;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 6px 12px;
+            background: #3498db;
+            color: white;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 12px;
+        }
+        .back-link:hover {
+            background: #2980b9;
+        }
+        .section-group-title {
+            font-size: 18px;
+            margin: 25px 0 10px;
+            padding-bottom: 5px;
+            border-bottom: 2px solid #bdc3c7;
+            color: #2c3e50;
+        }
+        .tool-section {
+            background: white;
+            border-radius: 8px;
+            border: 1px solid #e0e0e0;
+            padding: 15px 18px;
+            margin-bottom: 12px;
+        }
+        .tool-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 6px;
+        }
+        .tool-title {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        .tool-id {
+            font-size: 12px;
+            color: #7f8c8d;
+        }
+        .intent-label {
+            font-weight: bold;
+            margin-top: 8px;
+            margin-bottom: 4px;
+            color: #34495e;
+        }
+        .intent-text {
+            font-size: 13px;
+            color: #555;
+            margin: 0 0 6px;
+        }
+        .prompt-block {
+            background: #f8f9fa;
+            border-radius: 6px;
+            border: 1px solid #e1e4e8;
+            padding: 8px 10px;
+            margin-top: 6px;
+            font-size: 12px;
+            white-space: pre-wrap;
+        }
+        .tag-row {
+            margin-top: 6px;
+            font-size: 12px;
+        }
+        .tag-label {
+            font-weight: bold;
+            color: #7f8c8d;
+        }
+        .tag {
+            display: inline-block;
+            margin-right: 4px;
+            margin-top: 2px;
+            padding: 2px 7px;
+            border-radius: 10px;
+            background: #ecf0f1;
+            color: #555;
+            font-size: 11px;
+        }
+        @media (max-width: 768px) {
+            .tool-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 2px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    <div class="container">
+        <div class="title">도구 생성 의도 및 프롬프트 요약</div>
+        <div class="subtitle">각 도구가 어떤 의도로 설계되었는지, 어떤 프롬프트 관점에서 생성되었는지 간단히 정리한 페이지입니다.</div>
+        <a href="index.html" class="back-link">← 메인 도구 페이지로 돌아가기</a>
+    </div>
+</div>
+
+<div class="container">
+    <div class="section-group-title">📚 국어과 도구</div>
+
+    <section id="korean-01" class="tool-section">
+        <div class="tool-header">
+            <div class="tool-title">국어 01 - 독서 생활 기록장 (동화 구조화 분석표)</div>
+            <div class="tool-id">파일: 국어과_도구/01_동화_구조화_분석표.html</div>
+        </div>
+        <div class="intent-label">생성 의도</div>
+        <p class="intent-text">초등 국어 독서 활동을 단순 감상에서 끝내지 않고, 이야기 구조를 분석하고 독서 습관을 기록하도록 돕는 도구입니다. 등장인물·배경·사건 구조를 시각적으로 정리하고, 자신의 생각을 기록하며, 모둠과 공유할 수 있도록 설계했습니다.</p>
+        <div class="intent-label">프롬프트 요약</div>
+        <div class="prompt-block">"Create a Korean language arts reading journal / story structure organizer worksheet that helps students record their reading, analyze story elements (characters, setting, events), and reflect on their reading habits in an A4 print-friendly HTML format. Include sections for story structure, favorite parts, personal response, and cooperative sharing. Explicitly connect to 2022 curriculum competencies (의사소통, 자기관리, 심미적 감성)."</div>
+        <div class="tag-row"><span class="tag-label">핵심 역량:</span>
+            <span class="tag">의사소통</span><span class="tag">자기관리</span><span class="tag">심미적 감성</span>
+        </div>
+    </section>
+
+    <section id="korean-02" class="tool-section">
+        <div class="tool-header">
+            <div class="tool-title">국어 02 - 어휘력 향상 학습지</div>
+            <div class="tool-id">파일: 국어과_도구/02_어휘력_확장_학습지.html</div>
+        </div>
+        <div class="intent-label">생성 의도</div>
+        <p class="intent-text">새 어휘를 '단어-뜻' 수준에서 암기하는 것이 아니라, 문맥·동의어·반의어·표현 확장 활동과 연결해 자연스럽게 어휘 네트워크를 형성하도록 돕는 도구입니다. 개인 정리 + 모둠 어휘 게임까지 연결되도록 구성했습니다.</p>
+        <div class="intent-label">프롬프트 요약</div>
+        <div class="prompt-block">"Design a vocabulary enhancement worksheet that supports contextual learning of new Korean words using definitions, example sentences, synonyms/antonyms, and word families. Include collaborative vocabulary games, and make it A4 print-ready with explicit competency tags."</div>
+        <div class="tag-row"><span class="tag-label">핵심 역량:</span>
+            <span class="tag">의사소통</span><span class="tag">자기관리</span>
+        </div>
+    </section>
+
+    <section id="korean-03" class="tool-section">
+        <div class="tool-header">
+            <div class="tool-title">국어 03 - 문장 구조 / 읽기 이해 그래픽 조직자</div>
+            <div class="tool-id">파일: 국어과_도구/03_읽기_이해력_그래픽_조직자.html</div>
+        </div>
+        <div class="intent-label">생성 의도</div>
+        <p class="intent-text">글을 읽을 때 핵심 내용과 구조를 시각적으로 정리하도록 돕는 그래픽 조직자입니다. 문단별 중심 문장, 세부 정보, 이유와 근거를 정리하면서 읽기 이해력을 체계적으로 키우도록 설계했습니다.</p>
+        <div class="intent-label">프롬프트 요약</div>
+        <div class="prompt-block">"Create a reading comprehension graphic organizer for Korean texts that lets students capture main ideas, supporting details, and logical structure, using boxes and arrows on an A4-friendly HTML worksheet."</div>
+        <div class="tag-row"><span class="tag-label">핵심 역량:</span>
+            <span class="tag">의사소통</span><span class="tag">비판적 사고</span>
+        </div>
+    </section>
+
+    <section id="korean-04" class="tool-section">
+        <div class="tool-header">
+            <div class="tool-title">국어 04 - 창작적 글쓰기 프롬프트 카드</div>
+            <div class="tool-id">파일: 국어과_도구/04_창작적_글쓰기_프롬프트_카드.html</div>
+        </div>
+        <div class="intent-label">생성 의도</div>
+        <p class="intent-text">학생들이 글쓰기 소재를 떠올리기 어렵다는 부분을 해결하기 위해, 다양한 상황·인물·감정 프롬프트를 카드 형태로 제공하고, 이를 조합해 글을 쓰게 하는 도구입니다. 창의적 사고와 글쓰기 구조를 함께 훈련하도록 만들었습니다.</p>
+        <div class="intent-label">프롬프트 요약</div>
+        <div class="prompt-block">"Design a creative writing prompt card worksheet with mix-and-match prompts (situation, character, emotion, setting) that students can combine to plan and write stories, including planning spaces and reflection, in print-ready HTML."</div>
+        <div class="tag-row"><span class="tag-label">핵심 역량:</span>
+            <span class="tag">창의적 사고</span><span class="tag">의사소통</span>
+        </div>
+    </section>
+
+    <section id="korean-05" class="tool-section">
+        <div class="tool-header">
+            <div class="tool-title">국어 05 - 인물 분석 심화 학습지</div>
+            <div class="tool-id">파일: 국어과_도구/05_인물_분석_심화_학습지.html</div>
+        </div>
+        <div class="intent-label">생성 의도</div>
+        <p class="intent-text">이야기 속 인물의 겉모습이 아니라, 행동·생각·관계·변화를 중심으로 인물을 심층 분석하게 하는 도구입니다. 인물 분석을 통해 주제 이해와 자신의 삶 연결까지 확장하도록 설계했습니다.</p>
+        <div class="intent-label">프롬프트 요약</div>
+        <div class="prompt-block">"Create a character analysis worksheet that focuses on actions, thoughts, relationships, and changes of a character in a story, guiding students to infer traits and connect to the theme and their own life."</div>
+        <div class="tag-row"><span class="tag-label">핵심 역량:</span>
+            <span class="tag">비판적 사고</span><span class="tag">심미적 감성</span>
+        </div>
+    </section>
+
+    <section id="korean-06" class="tool-section">
+        <div class="tool-header">
+            <div class="tool-title">국어 06 - 대화 작성 및 표현 연습</div>
+            <div class="tool-id">파일: 국어과_도구/06_대화_작성_및_표현_연습.html</div>
+        </div>
+        <div class="intent-label">생성 의도</div>
+        <p class="intent-text">실제 대화 상황을 설정하고, 인물의 말투와 감정을 고려해 대사를 쓰고, 말하기·듣기 표현을 연습하도록 돕는 도구입니다. 역할극 활동과 연계하여 의사소통 역량을 기르도록 설계했습니다.</p>
+        <div class="intent-label">프롬프트 요약</div>
+        <div class="prompt-block">"Design a dialogue writing and speaking practice worksheet where students set a scenario, define characters, write dialogues, and practice speaking with expression and tone, supporting role-play activities."</div>
+        <div class="tag-row"><span class="tag-label">핵심 역량:</span>
+            <span class="tag">의사소통</span><span class="tag">공동체</span>
+        </div>
+    </section>
+
+    <section id="korean-07" class="tool-section">
+        <div class="tool-header">
+            <div class="tool-title">국어 07 - 시 감상 및 창작 학습지</div>
+            <div class="tool-id">파일: 국어과_도구/07_시_감상_및_창작_학습지.html</div>
+        </div>
+        <div class="intent-label">생성 의도</div>
+        <p class="intent-text">시를 읽고 느낌을 나누는 수준을 넘어, 표현 기법과 운율, 이미지 등을 분석하고 이를 바탕으로 자신만의 시를 써보도록 돕는 학습지입니다.</p>
+        <div class="intent-label">프롬프트 요약</div>
+        <div class="prompt-block">"Create a poetry appreciation and creation worksheet that includes poem display, analysis of poetic devices, personal response, and guided prompts for writing an original poem."</div>
+        <div class="tag-row"><span class="tag-label">핵심 역량:</span>
+            <span class="tag">심미적 감성</span><span class="tag">창의적 사고</span>
+        </div>
+    </section>
+
+    <section id="korean-08" class="tool-section">
+        <div class="tool-header">
+            <div class="tool-title">국어 08 - 신문 기사 비판적 읽기</div>
+            <div class="tool-id">파일: 국어과_도구/08_신문_기사_비판적_읽기.html</div>
+        </div>
+        <div class="intent-label">생성 의도</div>
+        <p class="intent-text">신문 기사를 사실 전달로만 받아들이지 않고, 관점·표현·생략된 정보 등을 분석하여 비판적으로 읽도록 돕는 도구입니다. 미디어 리터러시 교육과 직접 연결되도록 설계했습니다.</p>
+        <div class="intent-label">프롬프트 요약</div>
+        <div class="prompt-block">"Design a critical newspaper reading worksheet that guides students to analyze headline, lead, facts vs. opinions, bias, and missing perspectives, with space for critical questions and group discussion."</div>
+        <div class="tag-row"><span class="tag-label">핵심 역량:</span>
+            <span class="tag">비판적 사고</span><span class="tag">미디어 리터러시</span>
+        </div>
+    </section>
+
+    <section id="korean-09" class="tool-section">
+        <div class="tool-header">
+            <div class="tool-title">국어 09 - 토론 준비 및 협력 학습</div>
+            <div class="tool-id">파일: 국어과_도구/09_토론_준비_및_협력_학습.html</div>
+        </div>
+        <div class="intent-label">생성 의도</div>
+        <p class="intent-text">찬·반 입장을 정리하고, 주장-근거-예시 구조로 논리를 준비하며, 모둠 내 역할을 나누어 토론을 준비하도록 돕는 템플릿입니다. 협력 학습과 발표 역량까지 함께 기르도록 설계했습니다.</p>
+        <div class="intent-label">프롬프트 요약</div>
+        <div class="prompt-block">"Create a debate preparation worksheet with sections for topic selection, position, argument structure (claim-reason-evidence), team roles, and visual aid planning, supporting collaborative debate practice."</div>
+        <div class="tag-row"><span class="tag-label">핵심 역량:</span>
+            <span class="tag">공동체</span><span class="tag">의사소통</span>
+        </div>
+    </section>
+
+    <section id="korean-10" class="tool-section">
+        <div class="tool-header">
+            <div class="tool-title">국어 10 - 발표 구성 및 시각적 표현</div>
+            <div class="tool-id">파일: 국어과_도구/10_발표_구성_및_시각적_표현.html</div>
+        </div>
+        <div class="intent-label">생성 의도</div>
+        <p class="intent-text">발표 주제 선정부터 핵심 메시지 정리, 슬라이드 구조 설계, 시각 자료 디자인까지 발표 전 과정을 한 눈에 계획할 수 있는 도구입니다.</p>
+        <div class="intent-label">프롬프트 요약</div>
+        <div class="prompt-block">"Design a presentation planning worksheet that covers goals, audience, key messages, slide-by-slide outline, and visual design notes in an A4 printable layout."</div>
+        <div class="tag-row"><span class="tag-label">핵심 역량:</span>
+            <span class="tag">의사소통</span><span class="tag">창의적 사고</span>
+        </div>
+    </section>
+
+    <div class="section-group-title">🔢 수학과 도구</div>
+
+    <section id="math-01" class="tool-section">
+        <div class="tool-header">
+            <div class="tool-title">수학 01 - 수 감각 발달 활동</div>
+            <div class="tool-id">파일: 수학과_도구/01_수_감각_발달_활동.html</div>
+        </div>
+        <div class="intent-label">생성 의도</div>
+        <p class="intent-text">수의 크기 비교, 구성/분해, 시각적 표현, 구체물 활용을 통해 초등 저학년의 기초 수 감각을 기르는 활동지입니다. 놀이와 모둠 활동을 포함해 자연스럽게 수에 익숙해지도록 설계했습니다.</p>
+        <div class="intent-label">프롬프트 요약</div>
+        <div class="prompt-block">"Create a number sense worksheet that includes activities for comparing numbers, composing/decomposing numbers, visual representations, and hands-on materials, with collaborative games and real-life connections."</div>
+        <div class="tag-row"><span class="tag-label">핵심 역량:</span>
+            <span class="tag">문제해결</span><span class="tag">추론</span><span class="tag">의사소통</span>
+        </div>
+    </section>
+
+    <section id="math-02" class="tool-section">
+        <div class="tool-header">
+            <div class="tool-title">수학 02 - 분수 시각적 이해 학습지</div>
+            <div class="tool-id">파일: 수학과_도구/02_분수_시각적_이해_학습지.html</div>
+        </div>
+        <div class="intent-label">생성 의도</div>
+        <p class="intent-text">원·막대·도형을 활용해 분수를 시각적으로 표현하고, 크기를 비교하며, 실생활 맥락에서 분수 개념을 이해하도록 돕는 도구입니다.</p>
+        <div class="intent-label">프롬프트 요약</div>
+        <div class="prompt-block">"Design a visual fraction worksheet that uses shapes (circles, bars) to represent fractions, compare their sizes, and connect fractions to real-life situations in a print-friendly layout."</div>
+        <div class="tag-row"><span class="tag-label">핵심 역량:</span>
+            <span class="tag">문제해결</span><span class="tag">추론</span><span class="tag">공동체</span>
+        </div>
+    </section>
+
+    <section id="math-03" class="tool-section">
+        <div class="tool-header">
+            <div class="tool-title">수학 03 - 도형 탐구 및 조작 활동</div>
+            <div class="tool-id">파일: 수학과_도구/03_도형_탐구_및_조작_활동.html</div>
+        </div>
+        <div class="intent-label">생성 의도</div>
+        <p class="intent-text">기본 도형의 성질을 탐구하고, 회전·대칭·조합 활동을 통해 공간 감각을 기르도록 설계된 활동지입니다. 도형 퍼즐과 모둠 협력 활동까지 포함합니다.</p>
+        <div class="intent-label">프롬프트 요약</div>
+        <div class="prompt-block">"Create a geometry exploration worksheet for recognizing, classifying, and manipulating shapes (rotation, reflection, composition), including collaborative shape puzzles."</div>
+        <div class="tag-row"><span class="tag-label">핵심 역량:</span>
+            <span class="tag">추론</span><span class="tag">문제해결</span><span class="tag">공동체</span>
+        </div>
+    </section>
+
+    <section id="math-04" class="tool-section">
+        <div class="tool-header">
+            <div class="tool-title">수학 04 - 문제해결 사고력 템플릿</div>
+            <div class="tool-id">파일: 수학과_도구/04_문제해결_사고력_템플릿.html</div>
+        </div>
+        <div class="intent-label">생성 의도</div>
+        <p class="intent-text">문제를 이해하고, 계획을 세우고, 해결한 뒤 검토하는 5단계 문제해결 과정을 시각화한 템플릿입니다. 다양한 전략을 선택·기록하게 하여 사고 과정을 구조화하도록 돕습니다.</p>
+        <div class="intent-label">프롬프트 요약</div>
+        <div class="prompt-block">"Design a 5-step problem-solving thinking template (understand-plan-solve-check-reflect) with spaces to record strategies and reasoning for each step."</div>
+        <div class="tag-row"><span class="tag-label">핵심 역량:</span>
+            <span class="tag">문제해결</span><span class="tag">추론</span><span class="tag">의사소통</span>
+        </div>
+    </section>
+
+    <section id="math-05" class="tool-section">
+        <div class="tool-header">
+            <div class="tool-title">수학 05 - 데이터 수집 및 분석 활동</div>
+            <div class="tool-id">파일: 수학과_도구/05_데이터_수집_및_분석_활동.html</div>
+        </div>
+        <div class="intent-label">생성 의도</div>
+        <p class="intent-text">학생들이 직접 조사 주제를 정하고, 설문 문항을 만들고, 그래프를 그려 데이터를 분석하는 전 과정을 경험하도록 돕는 수학·정보처리 통합 활동지입니다.</p>
+        <div class="intent-label">프롬프트 요약</div>
+        <div class="prompt-block">"Create a data collection and analysis worksheet guiding students from choosing a topic, designing questions, collecting data, to drawing graphs and interpreting results collaboratively."</div>
+        <div class="tag-row"><span class="tag-label">핵심 역량:</span>
+            <span class="tag">정보처리</span><span class="tag">문제해결</span><span class="tag">공동체</span>
+        </div>
+    </section>
+
+    <section id="math-06" class="tool-section">
+        <div class="tool-header">
+            <div class="tool-title">수학 06 - 측정 활동 및 단위 이해</div>
+            <div class="tool-id">파일: 수학과_도구/06_측정_활동_및_단위_이해.html</div>
+        </div>
+        <div class="intent-label">생성 의도</div>
+        <p class="intent-text">길이·넓이·들이·무게 등 여러 측정 영역을 실제 활동과 연결하고, 단위 변환 연습과 생활 속 측정 프로젝트까지 포함한 활동지입니다.</p>
+        <div class="intent-label">프롬프트 요약</div>
+        <div class="prompt-block">"Design a measurement worksheet covering basic concepts, unit conversions, practical measurement tasks, and group measurement projects in daily contexts."</div>
+        <div class="tag-row"><span class="tag-label">핵심 역량:</span>
+            <span class="tag">문제해결</span><span class="tag">정보처리</span><span class="tag">공동체</span>
+        </div>
+    </section>
+
+    <section id="math-07" class="tool-section">
+        <div class="tool-header">
+            <div class="tool-title">수학 07 - 규칙 찾기 및 패턴 인식</div>
+            <div class="tool-id">파일: 수학과_도구/07_규칙_찾기_및_패턴_인식.html</div>
+        </div>
+        <div class="intent-label">생성 의도</div>
+        <p class="intent-text">수열·도형 패턴 등 다양한 규칙을 스스로 발견하고, 이를 일반화하는 경험을 제공하는 활동지입니다. 생활 속 패턴 찾기까지 확장합니다.</p>
+        <div class="intent-label">프롬프트 요약</div>
+        <div class="prompt-block">"Create a pattern recognition worksheet including number sequences, shape patterns, rule-finding prompts, and real-life pattern exploration."</div>
+        <div class="tag-row"><span class="tag-label">핵심 역량:</span>
+            <span class="tag">추론</span><span class="tag">문제해결</span><span class="tag">창의적 사고</span>
+        </div>
+    </section>
+
+    <section id="math-08" class="tool-section">
+        <div class="tool-header">
+            <div class="tool-title">수학 08 - 논리적 사고 수학 퍼즐</div>
+            <div class="tool-id">파일: 수학과_도구/08_논리적_사고_수학_퍼즐.html</div>
+        </div>
+        <div class="intent-label">생성 의도</div>
+        <p class="intent-text">수열·계산·논리·도형 퍼즐 등 다양한 유형의 퍼즐을 통해 논리적 사고와 추론 능력을 기르는 활동지입니다. 퍼즐 풀이 과정을 기록하게 하여 사고 흐름을 드러내도록 했습니다.</p>
+        <div class="intent-label">프롬프트 요약</div>
+        <div class="prompt-block">"Design a math puzzle worksheet with different types (sequence, arithmetic, logic, shape) and a structured process to record thinking steps and strategies."</div>
+        <div class="tag-row"><span class="tag-label">핵심 역량:</span>
+            <span class="tag">추론</span><span class="tag">문제해결</span><span class="tag">창의적 사고</span>
+        </div>
+    </section>
+
+    <section id="math-09" class="tool-section">
+        <div class="tool-header">
+            <div class="tool-title">수학 09 - 경제 생활 수학 기초</div>
+            <div class="tool-id">파일: 수학과_도구/09_경제_생활_수학_기초.html</div>
+        </div>
+        <div class="intent-label">생성 의도</div>
+        <p class="intent-text">용돈 관리, 소비와 저축, 간단한 이자 개념 등 기초적인 경제 생활 개념을 수학과 연결해 이해하도록 돕는 활동지입니다.</p>
+        <div class="intent-label">프롬프트 요약</div>
+        <div class="prompt-block">"Create an economic life math worksheet covering allowance management, spending vs saving, simple budgets, and basic interest ideas for elementary students."</div>
+        <div class="tag-row"><span class="tag-label">핵심 역량:</span>
+            <span class="tag">자기관리</span><span class="tag">문제해결</span><span class="tag">정보처리</span>
+        </div>
+    </section>
+
+    <section id="math-10" class="tool-section">
+        <div class="tool-header">
+            <div class="tool-title">수학 10 - 일상생활 수학 응용 활동</div>
+            <div class="tool-id">파일: 수학과_도구/10_일상생활_수학_응용_활동.html</div>
+        </div>
+        <div class="intent-label">생성 의도</div>
+        <p class="intent-text">쇼핑, 시간 관리, 집안일 분담, 게임 전략 등 실제 생활 장면 속에서 수학을 적용해 문제를 해결하는 프로젝트형 활동지입니다.</p>
+        <div class="intent-label">프롬프트 요약</div>
+        <div class="prompt-block">"Design a daily life math application worksheet with scenarios such as shopping, time scheduling, household tasks, and games, where students model and solve problems using math."</div>
+        <div class="tag-row"><span class="tag-label">핵심 역량:</span>
+            <span class="tag">문제해결</span><span class="tag">연결</span><span class="tag">공동체</span>
+        </div>
+    </section>
+
+</div>
+</body>
+</html>
