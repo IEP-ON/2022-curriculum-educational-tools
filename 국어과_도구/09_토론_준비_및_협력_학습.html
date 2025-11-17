@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>토론 준비 및 협력 학습 - 2022 개정교육과정 국어과</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 20mm;
+        }
+        
+        body {
+            font-family: 'Malgun Gothic', '맑은 고딕', sans-serif;
+            font-size: 12pt;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background: white;
+        }
+        
+        .header {
+            text-align: center;
+            border-bottom: 2px solid #333;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .title {
+            font-size: 18pt;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+        
+        .subtitle {
+            font-size: 11pt;
+            color: #7f8c8d;
+        }
+        
+        .info-box {
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .debate-setup {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .section {
+            border: 2px solid #e74c3c;
+            border-radius: 8px;
+            padding: 15px;
+            background: #fdf2f2;
+        }
+        
+        .section-title {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 14pt;
+            text-align: center;
+        }
+        
+        .input-field {
+            width: 100%;
+            min-height: 40px;
+            border: 1px solid #bdc3c7;
+            border-radius: 4px;
+            padding: 8px;
+            font-family: inherit;
+            font-size: 11pt;
+            margin-bottom: 10px;
+            background: white;
+        }
+        
+        .argument-structure {
+            border: 2px solid #3498db;
+            border-radius: 8px;
+            padding: 15px;
+            background: #ebf3fd;
+            margin-bottom: 20px;
+        }
+        
+        .argument-flow {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        .argument-step {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border: 1px solid #3498db;
+            border-radius: 5px;
+            padding: 10px;
+            background: white;
+        }
+        
+        .step-number {
+            background: #3498db;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+        
+        .step-content {
+            flex: 1;
+        }
+        
+        .collaborative-section {
+            border: 2px solid #27ae60;
+            border-radius: 8px;
+            padding: 15px;
+            background: #e8f8f5;
+            margin-bottom: 20px;
+        }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        .team-member {
+            border: 1px solid #27ae60;
+            border-radius: 5px;
+            padding: 10px;
+            background: white;
+            text-align: center;
+        }
+        
+        .member-role {
+            font-weight: bold;
+            color: #27ae60;
+            margin-bottom: 5px;
+        }
+        
+        .visual-aids {
+            border: 2px solid #9b59b6;
+            border-radius: 8px;
+            padding: 15px;
+            background: #f4ecf7;
+        }
+        
+        .aid-box {
+            border: 1px solid #9b59b6;
+            border-radius: 5px;
+            padding: 10px;
+            background: white;
+            margin-bottom: 10px;
+        }
+        
+        .aid-title {
+            font-weight: bold;
+            color: #9b59b6;
+            margin-bottom: 5px;
+        }
+        
+        .drawing-area {
+            width: 100%;
+            height: 150px;
+            border: 2px dashed #9b59b6;
+            border-radius: 5px;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #9b59b6;
+            font-size: 10pt;
+        }
+        
+        .competency-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            margin-top: 10px;
+        }
+        
+        .tag {
+            background: #e74c3c;
+            color: white;
+            padding: 3px 8px;
+            border-radius: 12px;
+            font-size: 9pt;
+        }
+        
+        @media print {
+            body { margin: 0; }
+            .header { page-break-after: avoid; }
+            .section, .argument-structure, .collaborative-section, .visual-aids { 
+                page-break-inside: avoid; 
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="title">토론 준비 및 협력 학습</div>
+        <div class="subtitle">2022 개정교육과정 국어과 · 의사소통 및 공동체 역량 강화</div>
+    </div>
+
+    <div class="info-box">
+        <strong>학습 목표:</strong> 토론 주제에 대해 논리적으로 분석하고, 
+        모둠원들과 협력하여 주장을 구성하며, 효과적인 토론 기법을 익힌다.
+        <div class="competency-tags">
+            <span class="tag">의사소통</span>
+            <span class="tag">공동체</span>
+            <span class="tag">비판적 사고</span>
+        </div>
+    </div>
+
+    <div class="debate-setup">
+        <div class="section">
+            <div class="section-title">토론 주제 설정</div>
+            <label>토론 주제:</label>
+            <select class="input-field">
+                <option>초등학생 스마트폰 사용 자율성 허용</option>
+                <option>학교 급식 메뉴 학생 참여 결정</option>
+                <option>사회 봉사 활동 의무화</option>
+                <option>교복 자율화 찬반</option>
+                <option>체육 수업 시간 확대</option>
+            </select>
+            
+            <label>나의 입장:</label>
+            <select class="input-field">
+                <option>찬성</option>
+                <option>반대</option>
+                <option>중립/조정</option>
+            </select>
+            
+            <label>입장 선택 이유:</label>
+            <textarea class="input-field" placeholder="왜 이 입장을 선택했는지 간단히 설명"></textarea>
+        </div>
+
+        <div class="section">
+            <div class="section-title">핵심 개념 정리</div>
+            <label>주요 용어 정의:</label>
+            <textarea class="input-field" placeholder="토론에 필요한 핵심 용어들의 의미"></textarea>
+            
+            <label>관련 배경 지식:</label>
+            <textarea class="input-field" placeholder="이 주제와 관련된 사실이나 정보"></textarea>
+            
+            <label>예상 반론:</label>
+            <textarea class="input-field" placeholder="상대방이 제기할 만한 반대 의견"></textarea>
+        </div>
+    </div>
+
+    <div class="argument-structure">
+        <div class="section-title">주장 구조화</div>
+        <div class="argument-flow">
+            <div class="argument-step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <strong>서론 (문제 제기)</strong>
+                    <textarea style="width: 100%; height: 40px; border: none; background: transparent; resize: none;" placeholder="문제 상황과 토론의 필요성"></textarea>
+                </div>
+            </div>
+            
+            <div class="argument-step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <strong>근거 1 (핵심 주장)</strong>
+                    <textarea style="width: 100%; height: 40px; border: none; background: transparent; resize: none;" placeholder="가장 강력한 근거와 사례"></textarea>
+                </div>
+            </div>
+            
+            <div class="argument-step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <strong>근거 2 (보강 주장)</strong>
+                    <textarea style="width: 100%; height: 40px; border: none; background: transparent; resize: none;" placeholder="두 번째 근거와 구체적 자료"></textarea>
+                </div>
+            </div>
+            
+            <div class="argument-step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <strong>반론 예상 및 반박</strong>
+                    <textarea style="width: 100%; height: 40px; border: none; background: transparent; resize: none;" placeholder="상대 반론에 대한 대응 논리"></textarea>
+                </div>
+            </div>
+            
+            <div class="argument-step">
+                <div class="step-number">5</div>
+                <div class="step-content">
+                    <strong>결론 (주장 요약)</strong>
+                    <textarea style="width: 100%; height: 40px; border: none; background: transparent; resize: none;" placeholder="전체 주장의 요약과 제안"></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="collaborative-section">
+        <div class="section-title">모둠 협력 활동</div>
+        <div class="team-grid">
+            <div class="team-member">
+                <div class="member-role">🎯 조장</div>
+                <textarea style="width: 100%; height: 60px; border: none; background: transparent; resize: none;" placeholder="토론 진행 및 시간 관리"></textarea>
+            </div>
+            <div class="team-member">
+                <div class="member-role">📝 기록자</div>
+                <textarea style="width: 100%; height: 60px; border: none; background: transparent; resize: none;" placeholder="주요 내용 정리 및 요약"></textarea>
+            </div>
+            <div class="team-member">
+                <div class="member-role">🔍 자료조사</div>
+                <textarea style="width: 100%; height: 60px; border: none; background: transparent; resize: none;" placeholder="관련 통계 및 사실 확인"></textarea>
+            </div>
+            <div class="team-member">
+                <div class="member-role">🎤 발표자</div>
+                <textarea style="width: 100%; height: 60px; border: none; background: transparent; resize: none;" placeholder="최종 발표 및 표현</textarea>
+            </div>
+            <div class="team-member">
+                <div class="member-role">🤝 질문자</div>
+                <textarea style="width: 100%; height: 60px; border: none; background: transparent; resize: none;" placeholder="상대방 질문 준비 및 응답"></textarea>
+            </div>
+            <div class="team-member">
+                <div class="member-role">🎨 시각자료</div>
+                <textarea style="width: 100%; height: 60px; border: none; background: transparent; resize: none;" placeholder="도표 및 이미지 준비"></textarea>
+            </div>
+        </div>
+        
+        <label>모둠 토론 결과:</label>
+        <textarea class="input-field" placeholder="모둠원들과 논의한 최종 의견"></textarea>
+        
+        <label>협력하면서 느낀 점:</label>
+        <textarea class="input-field" placeholder="모둠 활동의 장점과 어려움"></textarea>
+    </div>
+
+    <div class="visual-aids">
+        <div class="section-title">시각적 표현 자료</div>
+        
+        <div class="aid-box">
+            <div class="aid-title">📊 주장 요약 도표</div>
+            <div class="drawing-area">
+                [여기에 주장의 핵심 내용을 도표로 그려보세요]
+            </div>
+        </div>
+        
+        <div class="aid-box">
+            <div class="aid-title">📈 통계 자료 시각화</div>
+            <textarea class="input-field" placeholder="주장을 뒷받침할 통계나 그래프 설명"></textarea>
+        </div>
+        
+        <div class="aid-box">
+            <div class="aid-title">💡 키워드 맵</div>
+            <textarea class="input-field" placeholder="토론 주제와 관련된 핵심 키워드 정리"></textarea>
+        </div>
+        
+        <div class="aid-box">
+            <div class="aid-title">🎯 메시지 카드</div>
+            <textarea class="input-field" placeholder="상대방에게 전달하고 싶은 핵심 메시지 3가지"></textarea>
+        </div>
+    </div>
+
+    <div class="section" style="margin-top: 20px;">
+        <div class="section-title">토론 연습 및 평가</div>
+        
+        <label>실제 토론 연습 내용:</label>
+        <textarea class="input-field" placeholder="모둠원들과 실제 토론 연습한 내용"></textarea>
+        
+        <label>개선할 점:</label>
+        <textarea class="input-field" placeholder="연습을 통해 발견한 보완할 사항"></textarea>
+        
+        <label>상대 모둠의 예상 주장:</label>
+        <textarea class="input-field" placeholder="다른 모둠이 제시할 만한 주장 예측"></textarea>
+    </div>
+
+    <div class="info-box" style="margin-top: 20px;">
+        <strong>자기평가:</strong><br>
+        ☐ 논리적인 주장을 구성했다<br>
+        ☐ 충분한 근거를 제시했다<br>
+        ☐ 모둠원들과 적극적으로 협력했다<br>
+        ☐ 시각 자료를 효과적으로 활용했다<br>
+        ☐ 상대방의 의견을 경청하고 존중했다<br>
+        ☐ 자신의 생각을 명확하게 표현했다
+    </div>
+</body>
+</html>

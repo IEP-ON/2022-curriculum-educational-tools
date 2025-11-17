@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>인물 분석 심화 학습지 - 2022 개정교육과정 국어과</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 20mm;
+        }
+        
+        body {
+            font-family: 'Malgun Gothic', '맑은 고딕', sans-serif;
+            font-size: 12pt;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background: white;
+        }
+        
+        .header {
+            text-align: center;
+            border-bottom: 2px solid #333;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .title {
+            font-size: 18pt;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+        
+        .subtitle {
+            font-size: 11pt;
+            color: #7f8c8d;
+        }
+        
+        .info-box {
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .character-profile {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .profile-basic {
+            border: 2px solid #3498db;
+            border-radius: 8px;
+            padding: 15px;
+            background: #ebf3fd;
+        }
+        
+        .profile-detailed {
+            border: 2px solid #e74c3c;
+            border-radius: 8px;
+            padding: 15px;
+            background: #fdf2f2;
+        }
+        
+        .section-title {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 14pt;
+            text-align: center;
+        }
+        
+        .input-field {
+            width: 100%;
+            min-height: 40px;
+            border: 1px solid #bdc3c7;
+            border-radius: 4px;
+            padding: 8px;
+            font-family: inherit;
+            font-size: 11pt;
+            margin-bottom: 10px;
+            background: white;
+        }
+        
+        .trait-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        
+        .trait-box {
+            border: 1px solid #e74c3c;
+            border-radius: 5px;
+            padding: 10px;
+            background: white;
+        }
+        
+        .trait-label {
+            font-weight: bold;
+            color: #e74c3c;
+            margin-bottom: 5px;
+            text-align: center;
+        }
+        
+        .relationship-map {
+            border: 2px solid #27ae60;
+            border-radius: 8px;
+            padding: 15px;
+            background: #e8f8f5;
+            margin-bottom: 20px;
+        }
+        
+        .relationship-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        .relationship-item {
+            border: 1px solid #27ae60;
+            border-radius: 5px;
+            padding: 8px;
+            background: white;
+            text-align: center;
+        }
+        
+        .peer-review {
+            border: 2px solid #9b59b6;
+            border-radius: 8px;
+            padding: 15px;
+            background: #f4ecf7;
+        }
+        
+        .review-section {
+            border: 1px solid #9b59b6;
+            border-radius: 5px;
+            padding: 10px;
+            background: white;
+            margin-bottom: 10px;
+        }
+        
+        .review-title {
+            font-weight: bold;
+            color: #9b59b6;
+            margin-bottom: 5px;
+        }
+        
+        .review-text {
+            width: 100%;
+            min-height: 60px;
+            border: 1px solid #bdc3c7;
+            border-radius: 3px;
+            padding: 5px;
+            font-family: inherit;
+            font-size: 10pt;
+            background: white;
+        }
+        
+        .competency-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            margin-top: 10px;
+        }
+        
+        .tag {
+            background: #3498db;
+            color: white;
+            padding: 3px 8px;
+            border-radius: 12px;
+            font-size: 9pt;
+        }
+        
+        @media print {
+            body { margin: 0; }
+            .header { page-break-after: avoid; }
+            .profile-basic, .profile-detailed, .relationship-map, .peer-review { 
+                page-break-inside: avoid; 
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="title">인물 분석 심화 학습지</div>
+        <div class="subtitle">2022 개정교육과정 국어과 · 비판적 사고 및 공동체 역량 강화</div>
+    </div>
+
+    <div class="info-box">
+        <strong>학습 목표:</strong> 문학 작품 속 인물의 특성을 다각적으로 분석하고, 
+        동료와 협력하여 심층적으로 이해하며 비판적 관점을 발휘한다.
+        <div class="competency-tags">
+            <span class="tag">비판적 사고</span>
+            <span class="tag">공동체</span>
+            <span class="tag">의사소통</span>
+        </div>
+    </div>
+
+    <div class="character-profile">
+        <div class="profile-basic">
+            <div class="section-title">기본 정보</div>
+            <label>인물 이름:</label>
+            <input type="text" class="input-field" placeholder="분석할 인물의 이름">
+            
+            <label>작품 제목:</label>
+            <input type="text" class="input-field" placeholder="인물이 나오는 작품">
+            
+            <label>작가:</label>
+            <input type="text" class="input-field" placeholder="작가 이름">
+            
+            <label>인물 유형:</label>
+            <select class="input-field">
+                <option>주인공</option>
+                <option>조연 인물</option>
+                <option>갈등 인물</option>
+                <option>도움 인물</option>
+                <option>관찰자</option>
+            </select>
+        </div>
+
+        <div class="profile-detailed">
+            <div class="section-title">인물 특성 분석</div>
+            <div class="trait-grid">
+                <div class="trait-box">
+                    <div class="trait-label">외모 특징</div>
+                    <textarea class="input-field" placeholder="인물의 외모 묘사"></textarea>
+                </div>
+                <div class="trait-box">
+                    <div class="trait-label">성격 특징</div>
+                    <textarea class="input-field" placeholder="성격적 특성 3가지 이상"></textarea>
+                </div>
+                <div class="trait-box">
+                    <div class="trait-label">가치관</div>
+                    <textarea class="input-field" placeholder="중요하게 생각하는 가치"></textarea>
+                </div>
+                <div class="trait-box">
+                    <div class="trait-label">목표/욕구</div>
+                    <textarea class="input-field" placeholder="인물이 원하는 것"></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="relationship-map">
+        <div class="section-title">인물 관계맵</div>
+        <p><strong>이 인물과 관련된 다른 인물들과의 관계를 분석하세요:</strong></p>
+        <div class="relationship-grid">
+            <div class="relationship-item">
+                <strong>가족 관계</strong><br>
+                <textarea style="width: 100%; height: 50px; border: none; background: transparent; resize: none;" placeholder="가족과의 관계 특징"></textarea>
+            </div>
+            <div class="relationship-item">
+                <strong>친구 관계</strong><br>
+                <textarea style="width: 100%; height: 50px; border: none; background: transparent; resize: none;" placeholder="친구와의 관계 특징"></textarea>
+            </div>
+            <div class="relationship-item">
+                <strong>적대 관계</strong><br>
+                <textarea style="width: 100%; height: 50px; border: none; background: transparent; resize: none;" placeholder="갈등을 일으키는 인물과의 관계"></textarea>
+            </div>
+            <div class="relationship-item">
+                <strong>사회적 관계</strong><br>
+                <textarea style="width: 100%; height: 50px; border: none; background: transparent; resize: none;" placeholder="사회적 위치와 관계"></textarea>
+            </div>
+            <div class="relationship-item">
+                <strong>권력 관계</strong><br>
+                <textarea style="width: 100%; height: 50px; border: none; background: transparent; resize: none;" placeholder="권력 구조 속 위치"></textarea>
+            </div>
+            <div class="relationship-item">
+                <strong>감정적 관계</strong><br>
+                <textarea style="width: 100%; height: 50px; border: none; background: transparent; resize: none;" placeholder="감정적 유대나 갈등"></textarea>
+            </div>
+        </div>
+    </div>
+
+    <div class="profile-detailed">
+        <div class="section-title">심층 분석</div>
+        
+        <label>1. 인물의 내적 갈등은 무엇인가요?</label>
+        <textarea class="input-field" placeholder="인물이 겪는 마음속의 어려움이나 고민"></textarea>
+        
+        <label>2. 이 인물이 성장하는 과정은 어떻게 나타나나요?</label>
+        <textarea class="input-field" placeholder="작품 시작과 끝의 변화 과정"></textarea>
+        
+        <label>3. 이 인물을 통해 작가가 말하고 싶은 것은 무엇일까요?</label>
+        <textarea class="input-field" placeholder="작가의 의도나 사회적 메시지"></textarea>
+        
+        <label>4. 만약 내가 이 인물의 친구라면 어떤 조언을 해주고 싶나요?</label>
+        <textarea class="input-field" placeholder="현실적인 조언이나 공감의 말"></textarea>
+    </div>
+
+    <div class="peer-review">
+        <div class="section-title">동료 학습 및 협력 활동</div>
+        
+        <div class="review-section">
+            <div class="review-title">🤝 모둠 토론 주제</div>
+            <p><strong>"이 인물이 현실에 존재한다면 어떤 사람일까요?"</strong></p>
+            <textarea class="review-text" placeholder="모둠원들과 토론한 내용 요약"></textarea>
+        </div>
+        
+        <div class="review-section">
+            <div class="review-title">💬 친구의 의견 듣기</div>
+            <label>친구가 분석한 이 인물의 특징:</label>
+            <textarea class="review-text" placeholder="다른 친구의 분석 내용"></textarea>
+            
+            <label>내 생각과 다른 점:</label>
+            <textarea class="review-text" placeholder="다른 관점이나 새로운 발견"></textarea>
+        </div>
+        
+        <div class="review-section">
+            <div class="review-title">🌟 공동 작업</div>
+            <label>이 인물에 대한 우리 모둠의 공통 의견:</label>
+            <textarea class="review-text" placeholder="모둠의 합의된 의견"></textarea>
+            
+            <label>이 인물을 주인공으로 한 새로운 이야기 아이디어:</label>
+            <textarea class="review-text" placeholder="모둠이 함께 만든 창작 아이디어"></textarea>
+        </div>
+    </div>
+
+    <div class="info-box" style="margin-top: 20px;">
+        <strong>자기평가:</strong><br>
+        ☐ 인물의 특성을 다각적으로 분석했다<br>
+        ☐ 인물 관계를 체계적으로 파악했다<br>
+        ☐ 작가의 의도를 깊이 있게 생각했다<br>
+        ☐ 동료와 적극적으로 협력했다<br>
+        ☐ 새로운 관점을 발견하고 수용했다
+    </div>
+</body>
+</html>

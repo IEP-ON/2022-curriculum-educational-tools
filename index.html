@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2022 개정교육과정 수업도구 | Educational Tools for 2022 Curriculum</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 20mm;
+        }
+        
+        body {
+            font-family: 'Malgun Gothic', '맑은 고딕', sans-serif;
+            font-size: 14pt;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        .title {
+            font-size: 28pt;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            font-size: 16pt;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .intro {
+            background: #f8f9fa;
+            border-left: 4px solid #3498db;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 5px;
+        }
+        
+        .tools-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .tool-category {
+            border: 2px solid #e74c3c;
+            border-radius: 10px;
+            padding: 25px;
+            background: #fff;
+        }
+        
+        .tool-category.korean {
+            border-color: #e74c3c;
+            background: linear-gradient(135deg, #fff5f5 0%, #fff 100%);
+        }
+        
+        .tool-category.math {
+            border-color: #3498db;
+            background: linear-gradient(135deg, #f0f8ff 0%, #fff 100%);
+        }
+        
+        .category-title {
+            font-size: 20pt;
+            font-weight: bold;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        
+        .korean .category-title {
+            color: #e74c3c;
+        }
+        
+        .math .category-title {
+            color: #3498db;
+        }
+        
+        .tool-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+        
+        .tool-item {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            transition: all 0.3s ease;
+        }
+        
+        .tool-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .tool-name {
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #2c3e50;
+        }
+        
+        .tool-description {
+            font-size: 11pt;
+            color: #7f8c8d;
+            margin-bottom: 10px;
+        }
+        
+        .tool-link {
+            display: inline-block;
+            background: #3498db;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 10pt;
+            transition: background 0.3s ease;
+        }
+        
+        .tool-link:hover {
+            background: #2980b9;
+        }
+        
+        .korean .tool-link {
+            background: #e74c3c;
+        }
+        
+        .korean .tool-link:hover {
+            background: #c0392b;
+        }
+        
+        .features {
+            background: #ecf0f1;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+        
+        .features-title {
+            font-size: 18pt;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #2c3e50;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        
+        .feature-item {
+            text-align: center;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            border: 1px solid #bdc3c7;
+        }
+        
+        .feature-icon {
+            font-size: 24pt;
+            margin-bottom: 10px;
+        }
+        
+        .feature-title {
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #2c3e50;
+        }
+        
+        .feature-description {
+            font-size: 11pt;
+            color: #7f8c8d;
+        }
+        
+        .documentation {
+            background: #f39c12;
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        
+        .doc-title {
+            font-size: 18pt;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        
+        .doc-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .doc-link {
+            background: white;
+            color: #f39c12;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        
+        .doc-link:hover {
+            transform: scale(1.05);
+        }
+        
+        .footer {
+            background: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        @media (max-width: 768px) {
+            .tools-grid {
+                grid-template-columns: 1fr;
+            }
+            .tool-list {
+                grid-template-columns: 1fr;
+            }
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="title">2022 개정교육과정 수업도구</div>
+            <div class="subtitle">Educational Tools for 2022 Revised Curriculum</div>
+        </div>
+
+        <div class="content">
+            <div class="intro">
+                <h3>프로젝트 소개 | Project Introduction</h3>
+                <p>2022 개정교육과정의 핵심 역량을 강화하기 위한 교육용 도구 20종을 개발했습니다. 국어과 10종, 수학과 10종의 도구는 A4 인쇄 친화적 HTML 형식으로 제작되었으며, 학생들의 자기주도적 학습과 협력 학습을 촉진하도록 설계되었습니다.</p>
+                <p>We developed 20 educational tools to strengthen core competencies of the 2022 revised curriculum. The tools (10 Korean language arts, 10 mathematics) are designed as A4 print-friendly HTML worksheets to promote student self-directed learning and collaborative activities.</p>
+            </div>
+
+            <div class="tools-grid">
+                <div class="tool-category korean">
+                    <div class="category-title">📚 국어과 도구 (10종)</div>
+                    <div class="tool-list">
+                        <div class="tool-item">
+                            <div class="tool-name">독서 생활 기록장</div>
+                            <div class="tool-description">독서 습관 형성 및 감상 표현</div>
+                            <a href="국어과_도구/01_독서_생활_기록장.html" class="tool-link">열기</a>
+                        </div>
+                        <div class="tool-item">
+                            <div class="tool-name">어휘력 향상 학습지</div>
+                            <div class="tool-description">체계적 어휘 학습 및 확장</div>
+                            <a href="국어과_도구/02_어휘력_향상_학습지.html" class="tool-link">열기</a>
+                        </div>
+                        <div class="tool-item">
+                            <div class="tool-name">문장 구조 분석 연습</div>
+                            <div class="tool-description">문법적 분석 및 올바른 문장 쓰기</div>
+                            <a href="국어과_도구/03_문장_구조_분석_연습.html" class="tool-link">열기</a>
+                        </div>
+                        <div class="tool-item">
+                            <div class="tool-name">글쓰기 계획 템플릿</div>
+                            <div class="tool-description">체계적 글쓰기 과정 지원</div>
+                            <a href="국어과_도구/04_글쓰기_계획_템플릿.html" class="tool-link">열기</a>
+                        </div>
+                        <div class="tool-item">
+                            <div class="tool-name">설명문 쓰기 연습</div>
+                            <div class="tool-description">논리적 설명 및 정보 전달</div>
+                            <a href="국어과_도구/05_설명문_쓰기_연습.html" class="tool-link">열기</a>
+                        </div>
+                        <div class="tool-item">
+                            <div class="tool-name">대화 작성 및 표현 연습</div>
+                            <div class="tool-description">실제 대화 상황 시뮬레이션</div>
+                            <a href="국어과_도구/06_대화_작성_및_표현_연습.html" class="tool-link">열기</a>
+                        </div>
+                        <div class="tool-item">
+                            <div class="tool-name">시 감상 및 창작 학습지</div>
+                            <div class="tool-description">문학적 감상 및 창작 활동</div>
+                            <a href="국어과_도구/07_시_감상_및_창작_학습지.html" class="tool-link">열기</a>
+                        </div>
+                        <div class="tool-item">
+                            <div class="tool-name">신문 기사 비판적 읽기</div>
+                            <div class="tool-description">미디어 리터러시 및 비판적 사고</div>
+                            <a href="국어과_도구/08_신문_기사_비판적_읽기.html" class="tool-link">열기</a>
+                        </div>
+                        <div class="tool-item">
+                            <div class="tool-name">토론 준비 및 협력 학습</div>
+                            <div class="tool-description">논리 구성 및 협력 토론</div>
+                            <a href="국어과_도구/09_토론_준비_및_협력_학습.html" class="tool-link">열기</a>
+                        </div>
+                        <div class="tool-item">
+                            <div class="tool-name">발표 구성 및 시각적 표현</div>
+                            <div class="tool-description">체계적 발표 및 시각 자료</div>
+                            <a href="국어과_도구/10_발표_구성_및_시각적_표현.html" class="tool-link">열기</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tool-category math">
+                    <div class="category-title">🔢 수학과 도구 (10종)</div>
+                    <div class="tool-list">
+                        <div class="tool-item">
+                            <div class="tool-name">수 감각 발달 활동</div>
+                            <div class="tool-description">수의 크기 이해 및 표현</div>
+                            <a href="수학과_도구/01_수_감각_발달_활동.html" class="tool-link">열기</a>
+                        </div>
+                        <div class="tool-item">
+                            <div class="tool-name">분수 시각적 이해 학습지</div>
+                            <div class="tool-description">분수 개념의 시각적 이해</div>
+                            <a href="수학과_도구/02_분수_시각적_이해_학습지.html" class="tool-link">열기</a>
+                        </div>
+                        <div class="tool-item">
+                            <div class="tool-name">도형 탐구 및 조작 활동</div>
+                            <div class="tool-description">기하학적 도형 탐구</div>
+                            <a href="수학과_도구/03_도형_탐구_및_조작_활동.html" class="tool-link">열기</a>
+                        </div>
+                        <div class="tool-item">
+                            <div class="tool-name">문제해결 사고력 템플릿</div>
+                            <div class="tool-description">체계적 문제해결 과정</div>
+                            <a href="수학과_도구/04_문제해결_사고력_템플릿.html" class="tool-link">열기</a>
+                        </div>
+                        <div class="tool-item">
+                            <div class="tool-name">데이터 수집 및 분석 활동</div>
+                            <div class="tool-description">통계적 데이터 처리</div>
+                            <a href="수학과_도구/05_데이터_수집_및_분석_활동.html" class="tool-link">열기</a>
+                        </div>
+                        <div class="tool-item">
+                            <div class="tool-name">측정 활동 및 단위 이해</div>
+                            <div class="tool-description">측정 개념 및 단위 변환</div>
+                            <a href="수학과_도구/06_측정_활동_및_단위_이해.html" class="tool-link">열기</a>
+                        </div>
+                        <div class="tool-item">
+                            <div class="tool-name">규칙 찾기 및 패턴 인식</div>
+                            <div class="tool-description">수학적 규칙성 발견</div>
+                            <a href="수학과_도구/07_규칙_찾기_및_패턴_인식.html" class="tool-link">열기</a>
+                        </div>
+                        <div class="tool-item">
+                            <div class="tool-name">논리적 사고 수학 퍼즐</div>
+                            <div class="tool-description">논리력 및 추론 능력</div>
+                            <a href="수학과_도구/08_논리적_사고_수학_퍼즐.html" class="tool-link">열기</a>
+                        </div>
+                        <div class="tool-item">
+                            <div class="tool-name">경제 생활 수학 기초</div>
+                            <div class="tool-description">경제 소양 및 재테크</div>
+                            <a href="수학과_도구/09_경제_생활_수학_기초.html" class="tool-link">열기</a>
+                        </div>
+                        <div class="tool-item">
+                            <div class="tool-name">일상생활 수학 응용 활동</div>
+                            <div class="tool-description">실생활 수학 문제 해결</div>
+                            <a href="수학과_도구/10_일상생활_수학_응용_활동.html" class="tool-link">열기</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="features">
+                <div class="features-title">✨ 주요 특징 | Key Features</div>
+                <div class="feature-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon">📋</div>
+                        <div class="feature-title">2022 교육과정 연계</div>
+                        <div class="feature-description">핵심 역량 명시적 태깅</div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🤝</div>
+                        <div class="feature-title">협력 학습 설계</div>
+                        <div class="feature-description">모둠 활동 및 상호 평가</div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🖨️</div>
+                        <div class="feature-title">A4 인쇄 친화적</div>
+                        <div class="feature-description">인쇄 최적화 레이아웃</div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">💻</div>
+                        <div class="feature-title">디지털 호환성</div>
+                        <div class="feature-description">HTML/CSS 기반 설계</div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🎯</div>
+                        <div class="feature-title">자기주도적 학습</div>
+                        <div class="feature-description">자기평가 및 반성 기회</div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🌍</div>
+                        <div class="feature-title">실생활 연계</div>
+                        <div class="feature-description">의미 있는 학습 경험</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="documentation">
+                <div class="doc-title">📖 문서 | Documentation</div>
+                <div class="doc-links">
+                    <a href="README_교육도구_개발_보고서.md" class="doc-link">개발 보고서</a>
+                    <a href="개발_프롬프트_및_의도_상세보고서.md" class="doc-link">프롬프트 상세보고서</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>© 2024 2022 개정교육과정 수업도구 개발 프로젝트</p>
+            <p>Developed for 2022 Revised Curriculum Educational Tools</p>
+        </div>
+    </div>
+</body>
+</html>

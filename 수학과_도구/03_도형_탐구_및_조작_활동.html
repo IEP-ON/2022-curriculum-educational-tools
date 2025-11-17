@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>도형 탐구 및 조작 활동 - 2022 개정교육과정 수학과</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 20mm;
+        }
+        
+        body {
+            font-family: 'Malgun Gothic', '맑은 고딕', sans-serif;
+            font-size: 12pt;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background: white;
+        }
+        
+        .header {
+            text-align: center;
+            border-bottom: 2px solid #333;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .title {
+            font-size: 18pt;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+        
+        .subtitle {
+            font-size: 11pt;
+            color: #7f8c8d;
+        }
+        
+        .info-box {
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .shape-exploration {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .section {
+            border: 2px solid #27ae60;
+            border-radius: 8px;
+            padding: 15px;
+            background: #e8f8f5;
+        }
+        
+        .section-title {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 14pt;
+            text-align: center;
+        }
+        
+        .input-field {
+            width: 100%;
+            min-height: 40px;
+            border: 1px solid #bdc3c7;
+            border-radius: 4px;
+            padding: 8px;
+            font-family: inherit;
+            font-size: 11pt;
+            margin-bottom: 10px;
+            background: white;
+        }
+        
+        .shape-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .shape-card {
+            border: 2px solid #27ae60;
+            border-radius: 8px;
+            padding: 15px;
+            background: white;
+            text-align: center;
+        }
+        
+        .shape-name {
+            font-weight: bold;
+            color: #27ae60;
+            margin-bottom: 10px;
+            font-size: 12pt;
+        }
+        
+        .shape-drawing {
+            width: 80px;
+            height: 80px;
+            border: 1px solid #bdc3c7;
+            margin: 0 auto 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .square {
+            width: 60px;
+            height: 60px;
+            background: #27ae60;
+        }
+        
+        .circle {
+            width: 60px;
+            height: 60px;
+            background: #27ae60;
+            border-radius: 50%;
+        }
+        
+        .triangle {
+            width: 0;
+            height: 0;
+            border-left: 30px solid transparent;
+            border-right: 30px solid transparent;
+            border-bottom: 52px solid #27ae60;
+        }
+        
+        .properties-section {
+            border: 2px solid #3498db;
+            border-radius: 8px;
+            padding: 15px;
+            background: #ebf3fd;
+            margin-bottom: 20px;
+        }
+        
+        .properties-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        .property-box {
+            border: 1px solid #3498db;
+            border-radius: 5px;
+            padding: 10px;
+            background: white;
+        }
+        
+        .property-label {
+            font-weight: bold;
+            color: #3498db;
+            margin-bottom: 5px;
+        }
+        
+        .spatial-section {
+            border: 2px solid #e74c3c;
+            border-radius: 8px;
+            padding: 15px;
+            background: #fdf2f2;
+            margin-bottom: 20px;
+        }
+        
+        .spatial-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        .spatial-item {
+            border: 1px solid #e74c3c;
+            border-radius: 5px;
+            padding: 10px;
+            background: white;
+        }
+        
+        .collaborative-section {
+            border: 2px solid #9b59b6;
+            border-radius: 8px;
+            padding: 15px;
+            background: #f4ecf7;
+        }
+        
+        .team-activity {
+            border: 1px solid #9b59b6;
+            border-radius: 5px;
+            padding: 10px;
+            background: white;
+            margin-bottom: 10px;
+        }
+        
+        .activity-title {
+            font-weight: bold;
+            color: #9b59b6;
+            margin-bottom: 5px;
+        }
+        
+        .drawing-area {
+            width: 100%;
+            height: 100px;
+            border: 2px dashed #9b59b6;
+            border-radius: 5px;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #9b59b6;
+            font-size: 10pt;
+            margin-top: 8px;
+        }
+        
+        .competency-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            margin-top: 10px;
+        }
+        
+        .tag {
+            background: #27ae60;
+            color: white;
+            padding: 3px 8px;
+            border-radius: 12px;
+            font-size: 9pt;
+        }
+        
+        @media print {
+            body { margin: 0; }
+            .header { page-break-after: avoid; }
+            .section, .properties-section, .spatial-section, .collaborative-section { 
+                page-break-inside: avoid; 
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="title">도형 탐구 및 조작 활동</div>
+        <div class="subtitle">2022 개정교육과정 수학과 · 공간 감각 및 추론 역량 강화</div>
+    </div>
+
+    <div class="info-box">
+        <strong>학습 목표:</strong> 기본 도형의 특성을 이해하고, 도형을 조작하며, 
+        공간 관계를 파악하는 능력을 기른다.
+        <div class="competency-tags">
+            <span class="tag">추론</span>
+            <span class="tag">문제해결</span>
+            <span class="tag">공동체</span>
+        </div>
+    </div>
+
+    <div class="shape-exploration">
+        <div class="section">
+            <div class="section-title">기본 도형 인식</div>
+            <label>학습할 도형:</label>
+            <select class="input-field">
+                <option>정사각형</option>
+                <option>직사각형</option>
+                <option>삼각형</option>
+                <option>원</option>
+                <option>사다리꼴</option>
+                <option>마름모</option>
+            </select>
+            
+            <label>도형의 정의:</label>
+            <textarea class="input-field" placeholder="선택한 도형의 수학적 정의"></textarea>
+            
+            <label>도형의 특징:</label>
+            <textarea class="input-field" placeholder="변, 각, 대각선 등의 특징"></textarea>
+        </div>
+
+        <div class="section">
+            <div class="section-title">도형 분류</div>
+            <label>평면 도형 vs 입체 도형:</label>
+            <textarea class="input-field" placeholder="두 종류의 도형 차이점과 예시"></textarea>
+            
+            <label>정다각형의 조건:</label>
+            <textarea class="input-field" placeholder="정다각형이 되기 위한 조건"></textarea>
+            
+            <label>도형 분류 기준:</label>
+            <textarea class="input-field" placeholder="변의 수, 각의 크기 등으로 분류하기"></textarea>
+        </div>
+    </div>
+
+    <div class="shape-grid">
+        <div class="shape-card">
+            <div class="shape-name">정사각형</div>
+            <div class="shape-drawing">
+                <div class="square"></div>
+            </div>
+            <label>변의 수:</label>
+            <input type="number" class="input-field" placeholder="4" style="text-align: center;">
+            
+            <label>모든 각의 크기:</label>
+            <input type="text" class="input-field" placeholder="90°" style="text-align: center;">
+        </div>
+        
+        <div class="shape-card">
+            <div class="shape-name">원</div>
+            <div class="shape-drawing">
+                <div class="circle"></div>
+            </div>
+            <label>중심에서의 거리:</label>
+            <input type="text" class="input-field" placeholder="반지름" style="text-align: center;">
+            
+            <label>둘레의 이름:</label>
+            <input type="text" class="input-field" placeholder="원주" style="text-align: center;">
+        </div>
+        
+        <div class="shape-card">
+            <div class="shape-name">삼각형</div>
+            <div class="shape-drawing">
+                <div class="triangle"></div>
+            </div>
+            <label>내각의 합:</label>
+            <input type="text" class="input-field" placeholder="180°" style="text-align: center;">
+            
+            <label>삼각형의 종류:</label>
+            <input type="text" class="input-field" placeholder="정삼각형 등" style="text-align: center;">
+        </div>
+    </div>
+
+    <div class="properties-section">
+        <div class="section-title">도형의 속성 탐구</div>
+        <div class="properties-grid">
+            <div class="property-box">
+                <div class="property-label">📏 대칭성</div>
+                <textarea style="width: 100%; height: 60px; border: none; background: transparent; resize: none;" placeholder="선대칭, 점대칭 여부"></textarea>
+            </div>
+            <div class="property-box">
+                <div class="property-label">📐 각의 관계</div>
+                <textarea style="width: 100%; height: 60px; border: none; background: transparent; resize: none;" placeholder="내각, 외각의 크기 관계"></textarea>
+            </div>
+            <div class="property-box">
+                <div class="property-label">📊 면적 공식</div>
+                <textarea style="width: 100%; height: 60px; border: none; background: transparent; resize: none;" placeholder="넓이를 구하는 방법"></textarea>
+            </div>
+            <div class="property-box">
+                <div class="property-label">🔄 회전 대칭</div>
+                <textarea style="width: 100%; height: 60px; border: none; background: transparent; resize: none;" placeholder="회전해도 같은 모양인 각도"></textarea>
+            </div>
+        </div>
+        
+        <label>도형 간의 관계:</label>
+        <textarea class="input-field" placeholder="정사각형은 직사각형의 특별한 경우 등"></textarea>
+    </div>
+
+    <div class="spatial-section">
+        <div class="section-title">공간 지각 능력</div>
+        <div class="spatial-grid">
+            <div class="spatial-item">
+                <strong>도형 회전하기</strong>
+                <textarea style="width: 100%; height: 60px; border: none; background: transparent; resize: none;" placeholder="도형을 90°, 180° 회전했을 때 모양"></textarea>
+            </div>
+            <div class="spatial-item">
+                <strong>도형 뒤집기</strong>
+                <textarea style="width: 100%; height: 60px; border: none; background: transparent; resize: none;" placeholder="좌우 대칭, 상하 대칭 시 모양 변화"></textarea>
+            </div>
+            <div class="spatial-item">
+                <strong>도형 조합하기</strong>
+                <textarea style="width: 100%; height: 60px; border: none; background: transparent; resize: none;" placeholder="두 도형을 합쳐서 새로운 도형 만들기"></textarea>
+            </div>
+            <div class="spatial-item">
+                <strong>도형 나누기</strong>
+                <textarea style="width: 100%; height: 60px; border: none; background: transparent; resize: none;" placeholder="하나의 도형을 여러 도형으로 분리"></textarea>
+            </div>
+        </div>
+        
+        <label>공간 퍼즐 풀이:</label>
+        <div class="drawing-area">[여기에 도형 퍼즐을 그려보세요]</div>
+    </div>
+
+    <div class="collaborative-section">
+        <div class="section-title">모둠 협력 학습</div>
+        
+        <div class="team-activity">
+            <div class="activity-title">🧩 도형 맞추기 대회</div>
+            <label>모둠이 만든 도형 퍼즐:</label>
+            <textarea class="input-field" placeholder="여러 도형 조각으로 완성 그림 만들기"></textarea>
+            
+            <label>퍼즐 해결 전략:</label>
+            <textarea class="input-field" placeholder="어떤 순서로 도형을 맞출 것인지"></textarea>
+        </div>
+        
+        <div class="team-activity">
+            <div class="activity-title">🏗️ 도형 건축가</div>
+            <label>모둠이 설계한 도형 건물:</label>
+            <textarea class="input-field" placeholder="기본 도형으로 만든 건축물 설명"></textarea>
+            
+            <label>사용된 도형과 개수:</label>
+            <textarea class="input-field" placeholder="각 도형이 몇 개 사용되었는지"></textarea>
+        </div>
+        
+        <div class="team-activity">
+            <div class="activity-title">🔍 도형 찾기 게임</div>
+            <label>교실에서 찾은 도형:</label>
+            <textarea class="input-field" placeholder="교실 물건 속에 숨은 도형들"></textarea>
+            
+            <label>모둠원들이 찾은 도형 공유:</label>
+            <textarea class="input-field" placeholder="서로 다른 관점에서 발견한 도형"></textarea>
+        </div>
+    </div>
+
+    <div class="section" style="margin-top: 20px;">
+        <div class="section-title">일생활 속 도형</div>
+        
+        <label>1. 집에서 발견한 도형:</label>
+        <textarea class="input-field" placeholder="가전제품, 가구 등에 있는 도형"></textarea>
+        
+        <label>2. 도형을 활용한 문제 해결:</label>
+        <textarea class="input-field" placeholder="도형의 원리를 이용해 해결한 문제"></textarea>
+        
+        <label>3. 새로운 도형 디자인:</label>
+        <textarea class="input-field" placeholder="기본 도형을 조합한 새로운 디자인"></textarea>
+    </div>
+
+    <div class="info-box" style="margin-top: 20px;">
+        <strong>자기평가:</strong><br>
+        ☐ 기본 도형의 특성을 이해했다<br>
+        ☐ 도형을 분류하고 관계를 파악했다<br>
+        ☐ 공간 지각 능력을 발휘했다<br>
+        ☐ 모둠원들과 협력하여 학습했다<br>
+        ☐ 일상생활에서 도형을 찾고 활용했다
+    </div>
+</body>
+</html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>동화 구조화 분석표 - 2022 개정교육과정 국어과</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 20mm;
+        }
+        
+        body {
+            font-family: 'Malgun Gothic', '맑은 고딕', sans-serif;
+            font-size: 12pt;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background: white;
+        }
+        
+        .header {
+            text-align: center;
+            border-bottom: 2px solid #333;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .title {
+            font-size: 18pt;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+        
+        .subtitle {
+            font-size: 11pt;
+            color: #7f8c8d;
+        }
+        
+        .info-box {
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .story-structure {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .section {
+            border: 2px solid #3498db;
+            border-radius: 8px;
+            padding: 15px;
+            background: #ecf0f1;
+        }
+        
+        .section-title {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 14pt;
+            text-align: center;
+        }
+        
+        .input-field {
+            width: 100%;
+            min-height: 60px;
+            border: 1px solid #bdc3c7;
+            border-radius: 4px;
+            padding: 8px;
+            font-family: inherit;
+            font-size: 11pt;
+            margin-bottom: 10px;
+            background: white;
+        }
+        
+        .character-box {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        
+        .character {
+            border: 1px solid #95a5a6;
+            border-radius: 5px;
+            padding: 10px;
+            background: white;
+        }
+        
+        .morality-section {
+            border: 2px solid #e74c3c;
+            border-radius: 8px;
+            padding: 15px;
+            background: #fdf2f2;
+            margin-top: 20px;
+        }
+        
+        .question {
+            font-weight: bold;
+            color: #c0392b;
+            margin-bottom: 5px;
+        }
+        
+        .reflection {
+            width: 100%;
+            min-height: 80px;
+            border: 1px solid #e74c3c;
+            border-radius: 4px;
+            padding: 8px;
+            font-family: inherit;
+            font-size: 11pt;
+            background: white;
+        }
+        
+        .competency-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            margin-top: 10px;
+        }
+        
+        .tag {
+            background: #3498db;
+            color: white;
+            padding: 3px 8px;
+            border-radius: 12px;
+            font-size: 9pt;
+        }
+        
+        @media print {
+            body { margin: 0; }
+            .header { page-break-after: avoid; }
+            .section { page-break-inside: avoid; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="title">동화 구조화 분석표</div>
+        <div class="subtitle">2022 개정교육과정 국어과 · 창의적 사고 및 의사소통 역량 강화</div>
+    </div>
+
+    <div class="info-box">
+        <strong>학습 목표:</strong> 동화의 구조적 요소를 분석하고 등장인물의 특성을 파악하며, 
+        작가의 의도와 교훈을 비판적으로 사고하는 능력을 기른다.
+        <div class="competency-tags">
+            <span class="tag">창의적 사고</span>
+            <span class="tag">의사소통</span>
+            <span class="tag">자기관리</span>
+        </div>
+    </div>
+
+    <div class="story-structure">
+        <div class="section">
+            <div class="section-title">기본 정보</div>
+            <label>작품 제목:</label>
+            <input type="text" class="input-field" placeholder="동화 제목을 입력하세요">
+            
+            <label>작가:</label>
+            <input type="text" class="input-field" placeholder="작가를 입력하세요">
+            
+            <label>읽은 날짜:</label>
+            <input type="date" class="input-field">
+        </div>
+
+        <div class="section">
+            <div class="section-title">이야기의 구조</div>
+            <label>발단 (시작 상황):</label>
+            <textarea class="input-field" placeholder="이야기가 어떻게 시작되는지 설명하세요"></textarea>
+            
+            <label>전개 (문제 발생):</label>
+            <textarea class="input-field" placeholder="주요 문제나 갈등이 어떻게 발전하는지 설명하세요"></textarea>
+            
+            <label>절정 (최고조):</label>
+            <textarea class="input-field" placeholder="이야기가 가장 긴장되는 순간을 설명하세요"></textarea>
+            
+            <label>결말 (해결):</label>
+            <textarea class="input-field" placeholder="문제가 어떻게 해결되는지 설명하세요"></textarea>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">등장인물 분석</div>
+        <div class="character-box">
+            <div class="character">
+                <strong>주인공</strong>
+                <textarea class="input-field" placeholder="주인공의 이름과 특징을 설명하세요"></textarea>
+            </div>
+            <div class="character">
+                <strong>갈등 인물</strong>
+                <textarea class="input-field" placeholder="갈등을 일으키는 인물의 특징을 설명하세요"></textarea>
+            </div>
+            <div class="character">
+                <strong>도움 인물</strong>
+                <textarea class="input-field" placeholder="주인공을 돕는 인물의 특징을 설명하세요"></textarea>
+            </div>
+        </div>
+    </div>
+
+    <div class="morality-section">
+        <div class="section-title">가치관 및 교훈</div>
+        
+        <div class="question">1. 이 동화에서 주인공이 겪는 가장 큰 어려움은 무엇인가요?</div>
+        <textarea class="reflection" placeholder="주인공의 어려움을 자세히 설명하고, 왜 그것이 어려운지 이유를 써보세요"></textarea>
+        
+        <div class="question">2. 주인공은 이 어려움을 어떻게 극복하나요?</div>
+        <textarea class="reflection" placeholder="주인공의 해결 방법과 그 과정에서 보인 노력을 설명하세요"></textarea>
+        
+        <div class="question">3. 이 이야기를 통해 얻을 수 있는 교훈은 무엇인가요?</div>
+        <textarea class="reflection" placeholder="이야기의 교훈과 내 생활에 적용할 점을 써보세요"></textarea>
+        
+        <div class="question">4. 만약 내가 주인공이라면 어떻게 행동했을까요?</div>
+        <textarea class="reflection" placeholder="자신의 생각과 다르게 행동할 이유를 설명하세요"></textarea>
+    </div>
+
+    <div class="info-box" style="margin-top: 20px;">
+        <strong>자기평가:</strong><br>
+        ☐ 이야기의 구조를 완전히 이해했다<br>
+        ☐ 등장인물의 특성을 잘 파악했다<br>
+        ☐ 작가의 의도와 교훈을 깊이 생각했다<br>
+        ☐ 자신의 경험과 연결하여 생각했다
+    </div>
+</body>
+</html>

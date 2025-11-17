@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>어휘력 확장 학습지 - 2022 개정교육과정 국어과</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 20mm;
+        }
+        
+        body {
+            font-family: 'Malgun Gothic', '맑은 고딕', sans-serif;
+            font-size: 12pt;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background: white;
+        }
+        
+        .header {
+            text-align: center;
+            border-bottom: 2px solid #333;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .title {
+            font-size: 18pt;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+        
+        .subtitle {
+            font-size: 11pt;
+            color: #7f8c8d;
+        }
+        
+        .info-box {
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .vocabulary-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .word-card {
+            border: 2px solid #27ae60;
+            border-radius: 8px;
+            padding: 15px;
+            background: #e8f8f5;
+            margin-bottom: 15px;
+        }
+        
+        .word-title {
+            font-size: 16pt;
+            font-weight: bold;
+            color: #27ae60;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        
+        .input-field {
+            width: 100%;
+            min-height: 40px;
+            border: 1px solid #bdc3c7;
+            border-radius: 4px;
+            padding: 8px;
+            font-family: inherit;
+            font-size: 11pt;
+            margin-bottom: 10px;
+            background: white;
+        }
+        
+        .synonym-antonym {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        
+        .context-section {
+            border: 2px solid #3498db;
+            border-radius: 8px;
+            padding: 15px;
+            background: #ebf3fd;
+            margin-bottom: 15px;
+        }
+        
+        .story-box {
+            border: 1px solid #3498db;
+            border-radius: 5px;
+            padding: 12px;
+            background: white;
+            min-height: 100px;
+            font-size: 11pt;
+            line-height: 1.8;
+        }
+        
+        .word-bank {
+            border: 2px solid #9b59b6;
+            border-radius: 8px;
+            padding: 15px;
+            background: #f4ecf7;
+            margin-bottom: 15px;
+        }
+        
+        .word-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 10px;
+        }
+        
+        .word-item {
+            background: #9b59b6;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 10pt;
+            font-weight: bold;
+        }
+        
+        .exercise-section {
+            border: 2px solid #e67e22;
+            border-radius: 8px;
+            padding: 15px;
+            background: #fef5e7;
+        }
+        
+        .sentence-input {
+            width: 100%;
+            min-height: 50px;
+            border: 1px solid #e67e22;
+            border-radius: 4px;
+            padding: 8px;
+            font-family: inherit;
+            font-size: 11pt;
+            background: white;
+            margin-bottom: 10px;
+        }
+        
+        .competency-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            margin-top: 10px;
+        }
+        
+        .tag {
+            background: #27ae60;
+            color: white;
+            padding: 3px 8px;
+            border-radius: 12px;
+            font-size: 9pt;
+        }
+        
+        @media print {
+            body { margin: 0; }
+            .header { page-break-after: avoid; }
+            .word-card, .context-section, .word-bank, .exercise-section { 
+                page-break-inside: avoid; 
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="title">어휘력 확장 학습지</div>
+        <div class="subtitle">2022 개정교육과정 국어과 · 지식정보처리 및 창의적 사고 역량 강화</div>
+    </div>
+
+    <div class="info-box">
+        <strong>학습 목표:</strong> 새로운 어휘의 의미를 파악하고 문맥에 맞게 사용하며, 
+        동의어·반의어 관계를 이해하여 표현력을 향상시킨다.
+        <div class="competency-tags">
+            <span class="tag">지식정보처리</span>
+            <span class="tag">창의적 사고</span>
+            <span class="tag">의사소통</span>
+        </div>
+    </div>
+
+    <div class="vocabulary-grid">
+        <div class="word-card">
+            <div class="word-title">오늘의 어휘</div>
+            <label>단어:</label>
+            <input type="text" class="input-field" placeholder="새로운 단어를 입력하세요">
+            
+            <label>뜻풀이:</label>
+            <textarea class="input-field" placeholder="단어의 의미를 자세히 설명하세요"></textarea>
+            
+            <div class="synonym-antonym">
+                <div>
+                    <label>동의어:</label>
+                    <input type="text" class="input-field" placeholder="비슷한 뜻의 단어">
+                </div>
+                <div>
+                    <label>반의어:</label>
+                    <input type="text" class="input-field" placeholder="반대되는 뜻의 단어">
+                </div>
+            </div>
+            
+            <label>예문 만들기:</label>
+            <textarea class="input-field" placeholder="이 단어를 사용한 문장을 만들어보세요"></textarea>
+        </div>
+
+        <div class="word-card">
+            <div class="word-title">어원 탐구</div>
+            <label>한자 성분:</label>
+            <input type="text" class="input-field" placeholder="한자어의 각 부분 의미">
+            
+            <label>어원의 의미:</label>
+            <textarea class="input-field" placeholder="단어의 기원이나 만들어진 과정"></textarea>
+            
+            <label>관련 표현:</label>
+            <textarea class="input-field" placeholder="이 단어와 관련된 속담이나 관용구"></textarea>
+            
+            <label>비유적 의미:</label>
+            <textarea class="input-field" placeholder="문학적이나 비유적으로 사용될 때의 의미"></textarea>
+        </div>
+    </div>
+
+    <div class="context-section">
+        <div class="word-title">문맥 속 어휘 이해</div>
+        <div class="story-box">
+            <strong>다음 글을 읽고 물음에 답하세요.</strong><br><br>
+            
+            어머니께서는 매일 아침 일찍 일어나셔서 정성스럽게 아침 식사를 준비하신다. 
+            그 모습을 볼 때마다 나는 어머니의 <u>지극한</u> 사랑을 느낀다. 
+            어머니의 사랑은 <u>한결같은</u> 마음으로 우리 가족을 돌보는 모습에서 
+            드러난다. 나도 어머니처럼 <u>진실한</u> 마음으로 다른 사람을 
+            대하는 사람이 되고 싶다.
+        </div>
+        
+        <label>밑줄 친 단어들의 뜻을 각각 쓰세요:</label>
+        <textarea class="sentence-input" placeholder="지극한, 한결같은, 진실한의 뜻을 문맥에 맞게 설명하세요"></textarea>
+        
+        <label>이 글의 주제는 무엇인가요?</label>
+        <textarea class="sentence-input" placeholder="글의 중심 생각을 요약하세요"></textarea>
+    </div>
+
+    <div class="word-bank">
+        <div class="word-title">어휘 응용 훈련</div>
+        <strong>다음 단어들을 사용하여 짧은 이야기를 만들어보세요:</strong>
+        <div class="word-list">
+            <span class="word-item">용기</span>
+            <span class="word-item">우정</span>
+            <span class="word-item">성실</span>
+            <span class="word-item">감사</span>
+            <span class="word-item">희망</span>
+            <span class="word-item">노력</span>
+            <span class="word-item">협동</span>
+            <span class="word-item">책임</span>
+        </div>
+        
+        <textarea class="sentence-input" placeholder="위 단어들을 모두 사용하여 100자 이상의 이야기를 만들어보세요"></textarea>
+    </div>
+
+    <div class="exercise-section">
+        <div class="word-title">어휘 심화 학습</div>
+        
+        <label>1. 비슷한 상황에서 사용할 수 있는 다른 표현 찾기:</label>
+        <textarea class="sentence-input" placeholder="오늘 배운 단어와 비슷한 의미로 사용할 수 있는 다른 표현 3가지 이상"></textarea>
+        
+        <label>2. 일상생활에서 이 단어를 사용할 상황:</label>
+        <textarea class="sentence-input" placeholder="학교, 집, 친구와 함께 있을 때 등 구체적인 상황 설명"></textarea>
+        
+        <label>3. 이 단어와 관련된 나의 경험:</label>
+        <textarea class="sentence-input" placeholder="이 단어와 관련된 개인적인 경험이나 생각"></textarea>
+    </div>
+
+    <div class="info-box" style="margin-top: 20px;">
+        <strong>자기평가:</strong><br>
+        ☐ 새로운 어휘의 의미를 정확히 이해했다<br>
+        ☐ 문맥에 맞게 단어를 사용할 수 있다<br>
+        ☐ 동의어와 반의어 관계를 잘 파악했다<br>
+        ☐ 일상생활에서 활용할 수 있게 되었다
+    </div>
+</body>
+</html>

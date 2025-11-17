@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>일상생활 수학 응용 활동 - 2022 개정교육과정 수학과</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 20mm;
+        }
+        
+        body {
+            font-family: 'Malgun Gothic', '맑은 고딕', sans-serif;
+            font-size: 12pt;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background: white;
+        }
+        
+        .header {
+            text-align: center;
+            border-bottom: 2px solid #333;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .title {
+            font-size: 18pt;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+        
+        .subtitle {
+            font-size: 11pt;
+            color: #7f8c8d;
+        }
+        
+        .info-box {
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .daily-math-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .section {
+            border: 2px solid #16a085;
+            border-radius: 8px;
+            padding: 15px;
+            background: #e8f6f3;
+        }
+        
+        .section-title {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 14pt;
+            text-align: center;
+        }
+        
+        .input-field {
+            width: 100%;
+            min-height: 40px;
+            border: 1px solid #bdc3c7;
+            border-radius: 4px;
+            padding: 8px;
+            font-family: inherit;
+            font-size: 11pt;
+            margin-bottom: 10px;
+            background: white;
+        }
+        
+        .application-scenarios {
+            border: 2px solid #e74c3c;
+            border-radius: 8px;
+            padding: 15px;
+            background: #fdf2f2;
+            margin-bottom: 20px;
+        }
+        
+        .scenario-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            margin-top: 10px;
+        }
+        
+        .scenario-box {
+            border: 1px solid #e74c3c;
+            border-radius: 5px;
+            padding: 12px;
+            background: white;
+        }
+        
+        .scenario-title {
+            font-weight: bold;
+            color: #e74c3c;
+            margin-bottom: 8px;
+        }
+        
+        .problem-solving {
+            border: 2px solid #3498db;
+            border-radius: 8px;
+            padding: 15px;
+            background: #ebf3fd;
+            margin-bottom: 20px;
+        }
+        
+        .problem-steps {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        .problem-step {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            border: 1px solid #3498db;
+            border-radius: 5px;
+            padding: 10px;
+            background: white;
+        }
+        
+        .step-number {
+            background: #3498db;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+        
+        .step-content {
+            flex: 1;
+        }
+        
+        .collaborative-section {
+            border: 2px solid #9b59b6;
+            border-radius: 8px;
+            padding: 15px;
+            background: #f4ecf7;
+        }
+        
+        .team-activity {
+            border: 1px solid #9b59b6;
+            border-radius: 5px;
+            padding: 10px;
+            background: white;
+            margin-bottom: 10px;
+        }
+        
+        .activity-title {
+            font-weight: bold;
+            color: #9b59b6;
+            margin-bottom: 5px;
+        }
+        
+        .competency-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            margin-top: 10px;
+        }
+        
+        .tag {
+            background: #16a085;
+            color: white;
+            padding: 3px 8px;
+            border-radius: 12px;
+            font-size: 9pt;
+        }
+        
+        @media print {
+            body { margin: 0; }
+            .header { page-break-after: avoid; }
+            .section, .application-scenarios, .problem-solving, .collaborative-section { 
+                page-break-inside: avoid; 
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="title">일상생활 수학 응용 활동</div>
+        <div class="subtitle">2022 개정교육과정 수학과 · 문제해결 및 연결 역량 강화</div>
+    </div>
+
+    <div class="info-box">
+        <strong>학습 목표:</strong> 일상생활의 다양한 상황에서 수학을 활용하고, 
+        수학적 사고로 실제 문제를 해결하는 능력을 기른다.
+        <div class="competency-tags">
+            <span class="tag">문제해결</span>
+            <span class="tag">연결</span>
+            <span class="tag">공동체</span>
+        </div>
+    </div>
+
+    <div class="daily-math-grid">
+        <div class="section">
+            <div class="section-title">생활 속 수학 찾기</div>
+            <label>오늘 발견한 수학:</label>
+            <textarea class="input-field" placeholder="시간, 길이, 무게, 개수 등"></textarea>
+            
+            <label>수학이 필요한 순간:</label>
+            <textarea class="input-field" placeholder="계산, 측정, 비교 등이 필요한 상황"></textarea>
+            
+            <label>수학 없이 살 수 있을까?</label>
+            <textarea class="input-field" placeholder="수학이 없다면 어떤 문제가 생길지"></textarea>
+        </div>
+
+        <div class="section">
+            <div class="section-title">수학의 유용성</div>
+            <label>수학이 도와주는 것:</label>
+            <textarea class="input-field" placeholder="정확성, 효율성, 예측 등"></textarea>
+            
+            <label>수학적 사고의 장점:</label>
+            <textarea class="input-field" placeholder="논리력, 문제해결력, 분석력"></textarea>
+            
+            <label>수학을 잘하면 좋은 점:</label>
+            <textarea class="input-field" placeholder="학업, 생활, 미래 직업 등에서의 이점"></textarea>
+        </div>
+    </div>
+
+    <div class="application-scenarios">
+        <div class="section-title">실생활 수학 응용 상황</div>
+        <div class="scenario-grid">
+            <div class="scenario-box">
+                <div class="scenario-title">🛒 쇼핑할 때</div>
+                <p><strong>상황:</strong> 1,000원짜리 과자 3개와 2,000원짜리 음료 2개 사기</p>
+                <label>계산 과정:</label>
+                <textarea style="width: 100%; height: 50px; border: none; background: transparent; resize: none;" placeholder="총금액 계산과 거스름돈"></textarea>
+                
+                <label>할인 적용:</label>
+                <textarea style="width: 100%; height: 50px; border: none; background: transparent; resize: none;" placeholder="10% 할인시 최종 가격"></textarea>
+            </div>
+            
+            <div class="scenario-box">
+                <div class="scenario-title">⏰ 시간 관리</div>
+                <p><strong>상황:</strong> 학교 8:30, 수업 45분×6, 점심시간 1시간</p>
+                <label>하루 일과 계산:</label>
+                <textarea style="width: 100%; height: 50px; border: none; background: transparent; resize: none;" placeholder="시작 시간과 종료 시간 계산"></textarea>
+                
+                <label>시간 분배:</label>
+                <textarea style="width: 100%; height: 50px; border: none; background: transparent; resize: none;" placeholder="여가 시간과 공부 시간 비율"></textarea>
+            </div>
+            
+            <div class="scenario-box">
+                <div class="scenario-title">🏠 집안일 도우미</div>
+                <p><strong>상황:</strong> 방 청소, 빨래 개기, 설거지 돕기</p>
+                <label>시간 측정:</label>
+                <textarea style="width: 100%; height: 50px; border: none; background: transparent; resize: none;" placeholder="각 일에 걸리는 시간 측정"></textarea>
+                
+                <label>효율적인 순서:</label>
+                <textarea style="width: 100%; height: 50px; border: none; background: transparent; resize: none;" placeholder="가장 효율적인 일 처리 순서"></textarea>
+            </div>
+            
+            <div class="scenario-box">
+                <div class="scenario-title">🎮 게임 전략</div>
+                <p><strong>상황:</strong> 점수 계산, 레벨업, 아이템 구매</p>
+                <label>점수 계산:</label>
+                <textarea style="width: 100%; height: 50px; border: none; background: transparent; resize: none;" placeholder="경험치와 레벨업 조건 계산"></textarea>
+                
+                <label>전략 수립:</label>
+                <textarea style="width: 100%; height: 50px; border: none; background: transparent; resize: none;" placeholder="최적의 아이템 구매 방법"></textarea>
+            </div>
+        </div>
+        
+        <label>내가 경험한 수학 응용:</label>
+        <textarea class="input-field" placeholder="실제로 수학을 활용해 해결한 문제"></textarea>
+    </div>
+
+    <div class="problem-solving">
+        <div class="section-title">수학 문제해결 프로젝트</div>
+        <div class="problem-steps">
+            <div class="problem-step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <strong>문제 발견</strong>
+                    <textarea style="width: 100%; height: 40px; border: none; background: transparent; resize: none;" placeholder="생활에서 수학으로 해결할 만한 문제 찾기"></textarea>
+                </div>
+            </div>
+            
+            <div class="problem-step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <strong>정보 수집</strong>
+                    <textarea style="width: 100%; height: 40px; border: none; background: transparent; resize: none;" placeholder="문제 해결에 필요한 데이터와 정보 모으기"></textarea>
+                </div>
+            </div>
+            
+            <div class="problem-step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <strong>수학적 모델링</strong>
+                    <textarea style="width: 100%; height: 40px; border: none; background: transparent; resize: none;" placeholder="문제를 수학적 표현으로 바꾸기"></textarea>
+                </div>
+            </div>
+            
+            <div class="problem-step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <strong>해결 및 검증</strong>
+                    <textarea style="width: 100%; height: 40px; border: none; background: transparent; resize: none;" placeholder="수학적 해결책 찾고 실제 적용 확인"></textarea>
+                </div>
+            </div>
+            
+            <div class="problem-step">
+                <div class="step-number">5</div>
+                <div class="step-content">
+                    <strong>결과 공유</strong>
+                    <textarea style="width: 100%; height: 40px; border: none; background: transparent; resize: none;" placeholder="해결 과정과 결과를 다른 사람에게 설명"></textarea>
+                </div>
+            </div>
+        </div>
+        
+        <label>나의 문제해결 프로젝트:</label>
+        <textarea class="input-field" placeholder="실제 생활 문제를 수학으로 해결한 경험"></textarea>
+    </div>
+
+    <div class="collaborative-section">
+        <div class="section-title">모둠 생활 수학 프로젝트</div>
+        
+        <div class="team-activity">
+            <div class="activity-title">📊 교실 데이터 분석</div>
+            <label>조사 주제:</label>
+            <textarea class="input-field" placeholder="모둠이 함께 조사할 생활 데이터"></textarea>
+            
+            <label>수집 방법:</label>
+            <textarea class="input-field" placeholder="어떻게 데이터를 모을 것인지"></textarea>
+            
+            <label>분석 결과:</label>
+            <textarea class="input-field" placeholder="수학적 분석으로 발견한 사실"></textarea>
+        </div>
+        
+        <div class="team-activity">
+            <div class="activity-title">🏘️ 우리 동네 수학</div>
+            <label>동네의 수학적 특징:</label>
+            <textarea class="input-field" placeholder="건물 수, 상점 종류, 인구 등"></textarea>
+            
+            <label>수학으로 해결할 문제:</label>
+            <textarea class="input-field" placeholder="동네 발전을 위한 수학적 제안"></textarea>
+        </div>
+        
+        <div class="team-activity">
+            <div class="activity-title">🎯 수학 게임 개발</div>
+            <label>게임 규칙:</label>
+            <textarea class="input-field" placeholder="생활 수학을 활용한 게임 규칙"></textarea>
+            
+            <label>수학적 원리:</label>
+            <textarea class="input-field" placeholder="게임에 사용된 수학 개념 설명"></textarea>
+        </div>
+    </div>
+
+    <div class="section" style="margin-top: 20px;">
+        <div class="section-title">수학과 미래</div>
+        
+        <label>1. 미래에 필요한 수학:</label>
+        <textarea class="input-field" placeholder="AI, 과학기술 등에서 요구하는 수학 능력"></textarea>
+        
+        <label>2. 내 꿈과 수학:</label>
+        <textarea class="input-field" placeholder="하고 싶은 일과 필요한 수학 지식"></textarea>
+        
+        <label>3. 수학 공부 계획:</label>
+        <textarea class="input-field" placeholder="미래를 위한 수학 학습 계획"></textarea>
+    </div>
+
+    <div class="info-box" style="margin-top: 20px;">
+        <strong>자기평가:</strong><br>
+        ☐ 일상생활에서 수학을 찾을 수 있다<br>
+        ☐ 수학을 실제 문제 해결에 활용했다<br>
+        ☐ 수학적 사고로 문제를 분석했다<br>
+        ☐ 모둠원들과 협력하여 프로젝트를 수행했다<br>
+        ☐ 수학의 유용성과 중요성을 인식했다<br>
+        ☐ 미래를 위한 수학 학습 동기를 가졌다
+    </div>
+</body>
+</html>
